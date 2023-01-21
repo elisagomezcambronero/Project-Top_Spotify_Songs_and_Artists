@@ -3,7 +3,7 @@
 
 **Objective**: The objective of this project is to analyze the most popular songs and artists of the last years by manipulating and analyzing a complete and complex dataset, adding information through an API, and loading the generated database to SQL.   
 
-                What music is Trending? Why is it trending?
+     What music is Trending? Why is it trending?
 This Exploratory Data Analysis(EAD) project will end with several conclusions about what has been trending in the world of music in recent years. Thanks to the data set generated you will discover some elements that you may not know yet, so continue reading... you won't regret it! 
 
 ## Repository Structure
@@ -91,7 +91,7 @@ I will request to [Ticketmaster API](https://developer.ticketmaster.com/products
 
 ## Load data to SQL 
 ----
-- Creating a schema in my dataset: inside SQL I have created the following tables where I will upload the database. This Diagram will have several tables with song, artist and events, each table will have its own ID and there will be connected between them:
+- Creating a schema in my dataset: inside SQL I have created the following tables where I will load the database. This schema will have several tables with songs, artists and events, each table will have its own ID and will be connected to each other.
 
  ![](images/Spotify_SQL_Diagram.png)
 
@@ -104,8 +104,9 @@ I will request to [Ticketmaster API](https://developer.ticketmaster.com/products
 As a result from a complex dataset with multiple information about songs, artists and events we will get the following conclusions (notebook/Conclusions):
 
 *"According to the musician, pop music is inherently popular because it creates a sense of familiarity for listeners"- elle magazine*.
-Top spotify music predominat genre was by far Pop Genre.
+Top spotify music predominant genre was by far Pop Genre.
 ![](images/Song_Genre.png)
+
 *Where does most popular artists come from?*
 
 The United States is the most influential country in the industry and with this dataset we can confirm that US is the country where most influencial artist are from:
@@ -113,10 +114,14 @@ The United States is the most influential country in the industry and with this 
  ![](images/Artist_country.png)
 
 *Why is old music on Spotify's Top Today lists?*
-      ![](images/Songs_Decades.png)
+
+![](images/Songs_Decades.png)
  
-Most of the music is current, but there is a small percentage of older music in the dataset. It was identified that first, the oldest songs are by top artists such as: *Frank Sinatra, Queen, Elton John, AC/DC* and second, that Christmas songs endure over time:
-    ![](images/december_oldsongs.png)
+Most of the music is current, but there is a small percentage of older music in the dataset. It was identified that first, the oldest songs are by top artists such as: *Frank Sinatra, Queen, Elton John, AC/DC* and second, that Christmas songs endure over time: 
+
+![](images/december_oldsongs.png)
+
+
 
 So my recommendations, if you are an Artist and you want your music to be heard over time, would be, either become an iconic singer or focus on Christmas songs ;)
 
@@ -128,8 +133,7 @@ What does stand out is that most popular songs in *winter* have a higher degree 
 
 **Tell me what you like and I will tell you what you want !!**
 
-Finally, at the end of Conclusion jupyter you will find a function (using ticketmaster API) that will ask you the following questions:
-*What is your favorite music genre?* (from a list of music genres) and *Which Country interest you for the event?* (from a list of countries) and will give you the name of the events that will interest you!!
+Finally, at the end of of the Conclusion notebook you will find a function (using ticketmaster API) that will ask you the following questions: What is your favorite music genre (from a list of music genres) and What country are you interested in for the event (from a list of countries) and will give you the name of the events you might be interested in!!
 
 Ex. What is your favorite music genre? rock
 Which Country interest you for the event? Spain
