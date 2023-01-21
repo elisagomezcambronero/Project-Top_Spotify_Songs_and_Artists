@@ -1,4 +1,4 @@
-# Proyect-1: TOP SONGS & ARTISTS DATA ANALYSIS
+# Project-1: TOP SONGS & ARTISTS DATA ANALYSIS
 ![](images/music_icon.png)
 
 **Objective**: The objective of this project is to analyze the most popular songs and artists of the last years by manipulating and analyzing a complete and complex dataset, adding information through an API, and loading the generated database to SQL.   
