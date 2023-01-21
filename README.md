@@ -85,7 +85,7 @@ In the jupyter notebook: notebook/Spotify Cleaning you will find the cleaning pr
 ## Enrich data through an API
 ----
 
-I will request to ticketmaster API to provide me, if they are any, futur events related to the artists of my dataset. The following information for events all around the wold: *Event_Name, url, Country	City, Location* will enrich spotify dataset. df.shape (1114, 34)
+I will request to [Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/) to provide me, if they are any, futur events related to the artists of my dataset. The following information for events all around the wold: *Event_Name, url, Country	City, Location* will enrich spotify dataset. df.shape (1114, 34)
 
 ![](images/mapa_events_crop.png)
 
@@ -93,7 +93,7 @@ I will request to ticketmaster API to provide me, if they are any, futur events 
 ----
 - Creating a schema in my dataset: inside SQL I have created the following tables where I will upload the database. This Diagram will have several tables with song, artist and events, each table will have its own ID and there will be connected between them:
 
- ![](images/Spotify_Sql_Diagram.png)
+ ![](images/Spotify_SQL_Diagram.png)
 
  To find the script to the SQL Schema: sql_model /SQL_Spotify_script
 
