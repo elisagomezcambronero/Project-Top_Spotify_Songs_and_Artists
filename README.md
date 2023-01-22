@@ -28,20 +28,21 @@ Datasets extracted from [Kaggle Data Sets](https://www.kaggle.com/datasets):
 - Main dataset: **"Spotify Top 200 Charts (2020-2021)"**
 This dataset includes information about all songs that have been on Spotify Top 200 Weekly (Global) charts in 2020 and 2021
 
-- Addtional dataset: **"Spotify Artist Metadata Top 10k"** that will add the following information about the artist: *gender, age, type, country* to the main dataset
+- Additional dataset: **"Spotify Artist Metadata Top 10k"** that will add the following information about the artist: *gender, age, type, country* to the main dataset
 
 ## Cleaning  
 ----
 The data will be cleaned and manipulated to reveal interesting conclusions about the world of music in recent years.
 
 In the jupyter notebook: notebook/Spotify Cleaning you will find the cleaning process
- -   **"Spotify Top 200 Charts (2020-2021)"** shape is (1556, 22) and has the following columns: 'Highest Charting Position', 'Number of Times Charted',
+ -   **"Spotify Top 200 Charts (2020-2021)"** has the following columns: 'Highest Charting Position', 'Number of Times Charted',
        'Week of Highest Charting', 'Song Name', 'Streams', 'Artist',
        'Artist Followers', 'Song ID', 'Genre', 'Release Date', 'Weeks Charted',
        'Popularity', 'Danceability', 'Energy', 'Loudness', 'Speechiness',
        'Acousticness', 'Liveness', 'Tempo', 'Duration (ms)', 'Valence',
        'Chord'
-- With an inner merge with the dataset **"Spotify Artist Metadata Top 10k"** we will add to the dataset the following info:*gender, age, type, country* of the artist. Complete df.shape (1157, 26)
+- With an inner merge with the dataset **"Spotify Artist Metadata Top 10k"** we will add to the dataset the following info:*gender, age, type, country* of the artist. 
+- Complete df.shape (1157, 26)
 
 ### Cleaning Process:
 - df.dtypes: make sure the columns types are correct
@@ -51,7 +52,7 @@ In the jupyter notebook: notebook/Spotify Cleaning you will find the cleaning pr
 - **Genre**: Song [Genre] column has the following format:"['indie rock italiano', 'italian pop']". It gives a string with one or more specific genres for the song. With this information I have created 3 columns: 
     - "Genre1": using regex this column will give the first genre inside the string in [Genre] column. Ex. input: "['indie rock italiano', 'italian pop']" output: 'indie rock italiano'. This column will be later rename as [Subgenre]
     - "Genre2": using regex this column will give the second genre (if any) inside the string in [Genre] column. Ex. input: "['indie rock italiano', 'italian pop']" output: 'italian pop'. This column will be later rename as [Subgenre_2]
-    - "Genre_Gen": using funzzywuzzy this column will give a more generic song genre inside the list : *"pop", "hip hop", "latin", "rock", "dance pop", "rap", "trap", "pop rock", "funk", "reggaeton", "r&b", "edm", "drill"*
+    - "Genre_Gen": using funzzywuzzy this column will give a more generic song genre inside the list : *"pop", "hip hop", "latin", "rock", "dance pop", "rap", "trap", "pop rock", "funk", "reggaeton", "r&b", "edm", "drill"* This column will be later rename as [Genre]
 
 - **Week_Of_Highest_Charting**: this column gives you the week when the spotify song was on higuest charting: Ex. "2021-07-23--2021-07-30". With this information I have created the following columns:
     - "Week_Of_Highest_Charting" will give the start of the week when the song was most charted. Ex. 2021-07-23
@@ -64,6 +65,8 @@ In the jupyter notebook: notebook/Spotify Cleaning you will find the cleaning pr
 - **Country**: This column gives the country of the artist. It is the column with more null values (12.8%) to reduce this percentage we will use selenium webscraping which will go to [Music Brain web](https://musicbrainz.org/) to search the nationalities of the artists.
 
 - **Age**: This columns gives the age of the artist but since the age doesnt seem very accurate, I will add a column [Artist_generation] to allocate the following generations: ![](images/Generations.png) For this we are assuming all artists can produce a song from their birth to the present day, if not, necessary corrections will be made.
+
+- **Song_Decade**: This column will give you the Decade when the song was realeased, this column will be created applying a function to the column [Release_Date]. Ex. input: 2017-12-08 output:2010s.
 
 
 ### Data Structure
@@ -133,7 +136,7 @@ What does stand out is that most popular songs in *winter* have a higher degree 
 
 **Tell me what you like and I will tell you what you want !!**
 
-Finally, at the end of of the Conclusion notebook you will find a function (using ticketmaster API) that will ask you the following questions: What is your favorite music genre (from a list of music genres) and What country are you interested in for the event (from a list of countries) and will give you the name of the events you might be interested in!!
+Finally, at the end of of the Conclusion notebook you will find a function (using ticketmaster API) that will ask you the following questions: What is your favorite music genre (from a list of music genres) and What country are you interested in for the event (from a list of countries) and will give you the name of the events you might be interested in!!    
 
 Ex. What is your favorite music genre? rock
 Which Country interest you for the event? Spain
