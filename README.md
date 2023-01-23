@@ -129,8 +129,9 @@ Most of the music is current, but there is a small percentage of older music in 
 So my recommendations, if you are an Artist and you want your music to be heard over time, would be, either become an iconic singer or focus on Christmas songs ;)
 
 *Does popular tastes change over the year?*
+
 Lets see if popularity characteristics values change depending on the season:
-  ![](images/song_caracteristics.png)
+  ![](images/Song_caracteristics.png)
 
 What does stand out is that most popular songs in *winter* have a higher degree of *acoustic* characteristics.This indicate that in winter people tends to like songs that are less electronic and more acoustic compared to other seasons. So YES, people taste can change!
 
