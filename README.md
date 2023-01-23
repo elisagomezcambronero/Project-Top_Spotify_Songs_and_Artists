@@ -88,7 +88,7 @@ In the jupyter notebook: notebook/Spotify Cleaning you will find the cleaning pr
 ## Enrich data through an API
 ----
 
-I will request to [Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/) to provide me, if they are any, futur events related to the artists of my dataset. The following information for events all around the wold: *Event_Name, url, Country	City, Location* will enrich spotify dataset. df.shape (1114, 34)
+I will request to [Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/) to provide me, if they are any, future events related to the artists of my dataset. The following information for events all around the wold: *Event_Name, url, Country	City, Location* will enrich spotify dataset. df.shape (1114, 34)
 
 ![](images/mapa_events_crop.png)
 
@@ -150,7 +150,8 @@ Output: **['The Kooks', 'VV', 'EELS', 'Uoho', 'Deathstars.', 'Blackberry Smoke',
 - [Folium](https://python-visualization.github.io/folium/)
 - [Dotenv](https://pypi.org/project/python-dotenv/) 
 - [Selenium](https://www.selenium.dev/)
-- [Gender_guesser.detector](https://pypi.org/project/gender-guesser/)
+- [Gender Guesser](https://pypi.org/project/gender-guesser/)
+- [Fuzzywuzzy](https://pypi.org/project/fuzzywuzzy/)
 - [Datetime](https://docs.python.org/3/library/datetime.html)
 - [Sqlalchemy](https://www.sqlalchemy.org/)
 - [Sys](https://docs.python.org/3/library/sys.html)
